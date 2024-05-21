@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane stylesheets="@application.css" prefHeight="800.0"
+	prefWidth="1460.0" xmlns="http://javafx.com/javafx/17"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.PurchaseLineController">
+	<children>
+
+		<TextField fx:id="Search" onAction="#search" layoutX="100.0"
+			layoutY="70.0" prefHeight="34.0" prefWidth="200.0"
+			promptText="Search by ID" styleClass="search"
+			stylesheets="@application.css" />
+
+		<ImageView fitHeight="30.0" fitWidth="23.0" layoutX="70"
+			layoutY="75" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image
+					url="file:/C:/Users/Microsoft/Desktop/search.png" />
+			</image>
+		</ImageView>
+
+		<Label layoutX="400" layoutY="80" text="Purchase Line Table" />
+
+		<TableView fx:id="purLine_table" layoutX="350"
+			layoutY="110" prefHeight="500.0" prefWidth="290.0"
+			style="-fx-border-color: black; -fx-border-width: 2;-fx-effect: innershadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);">
+			<columns>
+				<TableColumn text="purchase ID" fx:id="purIDCol"/>
+				<TableColumn text="Product ID" fx:id="productIDCol" />
+				<TableColumn text="quantity" fx:id="quantityCol" />
+				<TableColumn text="Total cost" fx:id="costCol"/>
+			</columns>
+		</TableView>
+
+		<Button text="Back" layoutX="50.0" layoutY="750"
+			fx:id="backBtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleBackButton" />
+
+		<Label layoutX="830" layoutY="110" text="purchaseID">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="purIDField" layoutX="1000"
+			layoutY="110" styleClass="textfield" stylesheets="@application.css" />
+
+		<Label layoutX="830" layoutY="180" text="product id">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="productIDField" layoutX="1000" layoutY="180"
+			styleClass="textfield" stylesheets="@application.css" />
+
+		<Label layoutX="830" layoutY="250" text="quantity">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="quantityField" layoutX="1000"
+			layoutY="250.0" styleClass="textfield" stylesheets="@application.css" />
+
+		<Button text="Add" layoutX="830.0" layoutY="400.0"
+			fx:id="addBtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleAddButton" />
+		<Button text="Delete" layoutX="930.0" layoutY="400.0"
+			fx:id="deleteBtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleDeleteButton" />
+		<Button text="Refresh" layoutX="1030.0" layoutY="400.0"
+			fx:id="refreshBtn" styleClass="update-btn"
+			stylesheets="@application.css"
+			onAction="#handleRefreshButton" />
+
+	</children>
+</AnchorPane>
+
+
+

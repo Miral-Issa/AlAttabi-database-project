@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane stylesheets="@application.css" prefHeight="750.0"
+	prefWidth="1460.0" xmlns="http://javafx.com/javafx/17"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.OrderPaymentController">
+	<children>
+
+		<TextField fx:id="Search" onAction="#Search" layoutX="100.0"
+			layoutY="70.0" prefHeight="34.0" prefWidth="218.0"
+			promptText="Search by ID" styleClass="search"
+			stylesheets="@application.css" />
+		<ImageView fitHeight="30.0" fitWidth="23.0" layoutX="70"
+			layoutY="75" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image
+					url="file:/C:/Users/Microsoft/Desktop/search.png" />
+			</image>
+		</ImageView>
+
+		<Label layoutX="300" layoutY="150" text="Order Payment Table" />
+
+		<TableView fx:id="orderPay_table" layoutX="200"
+			layoutY="200" prefHeight="500.0" prefWidth="490"
+			style="-fx-border-color: black; -fx-border-width: 2;-fx-effect: innershadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);">
+			<columns>
+				<TableColumn text="orderPayID" fx:id="orderPayIDCol" />
+				<TableColumn text="PayType" fx:id="payTypeCol" />
+				<TableColumn text="PayAmount" fx:id="amountCol" />
+				<TableColumn text="PaymentDate" fx:id="payDateCol" />
+				<TableColumn text="dueDate" fx:id="dueDateCol" />
+				<TableColumn text="orderID" fx:id="orderIDCol"
+					prefWidth="100" />
+			</columns>
+		</TableView>
+
+		<Button text="Back" layoutX="50.0" layoutY="750"
+			fx:id="backbtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleBackButton" />
+
+		<Label layoutX="1000" layoutY="100" text="OrderPayID">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="orderPayID" layoutX="1200" layoutY="100"
+			styleClass="textfield" stylesheets="@application.css" />
+
+
+		<Label layoutX="1000" layoutY="200" text="PaymentType">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="PayType" layoutX="1200" layoutY="200"
+			styleClass="textfield" stylesheets="@application.css" />
+
+
+		<Label layoutX="1000" layoutY="300" text="Amount">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="Ammount" layoutX="1200" layoutY="300.0"
+			styleClass="textfield" stylesheets="@application.css" />
+
+
+		<Label layoutX="1000" layoutY="400" text="PaymentDate">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="PayDateText" layoutX="1200" layoutY="400"
+			styleClass="textfield" stylesheets="@application.css" />
+
+
+
+		<Label layoutX="1000" layoutY="500" text="dueDate">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="DueDateText" layoutX="1200" layoutY="500"
+			styleClass="textfield" stylesheets="@application.css" />
+
+		<Label layoutX="1000" layoutY="600" text="OrderID">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="orderIDText" layoutX="1200" layoutY="600"
+			styleClass="textfield" stylesheets="@application.css" />
+
+		<Button text="Add" layoutX="1000.0" layoutY="700.0"
+			fx:id="Addbtn" styleClass="update-btn" stylesheets="@application.css"
+			onAction="#handleAddButton" />
+		<Button text="Delete" layoutX="1100.0" layoutY="700.0"
+			fx:id="deletebtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleDeleteButton" />
+		<Button text="Refresh" layoutX="1200.0" layoutY="700.0"
+			fx:id="refreshbtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleRefreshButton" />
+		<Button text="checks" layoutX="1300.0" layoutY="700.0"
+			fx:id="checks" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handlecheckButton" />
+
+	</children>
+</AnchorPane>
+        

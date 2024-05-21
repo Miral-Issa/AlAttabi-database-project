@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/20.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.Welcomepage">
+	<children>
+		<AnchorPane prefHeight="820.0" prefWidth="1536.0">
+			<children>
+				<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+					minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0"
+					prefWidth="1536.0" styleClass="semi-top-form"
+					stylesheets="@application.css" AnchorPane.bottomAnchor="0.0"
+					AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+					AnchorPane.topAnchor="0.0">
+					<children>
+						<BorderPane layoutX="200.0" layoutY="66.0"
+							prefHeight="504.0" prefWidth="768.0"
+							AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+							AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<left>
+								<AnchorPane prefHeight="587.0" prefWidth="300.0"
+									BorderPane.alignment="CENTER">
+									<children>
+										<AnchorPane prefHeight="587.2" prefWidth="241.6"
+											styleClass="nav-form" stylesheets="@application.css"
+											AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+											AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+											<children>
+												<Line endX="78.19998168945312" endY="-1.52587890625E-5"
+													layoutX="129.0" layoutY="100.0" startX="-100.0"
+													stroke="#fcfafa" strokeWidth="2.0" />
+												<Label alignment="CENTER" contentDisplay="CENTER"
+													layoutX="20.0" layoutY="50.0" prefHeight="20.0"
+													prefWidth="200.0" text="AL-Attabi stores"
+													textAlignment="CENTER" textFill="#fff6f6">
+													<font>
+														<Font name="Arial Bold" size="18.0" />
+													</font>
+												</Label>
+											</children>
+											<Button layoutX="60.0" layoutY="120.0"
+												mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0"
+												styleClass="update-btn" stylesheets="@application.css"
+												text="Inventory" onAction="#inventory" />
+											<Button layoutX="60.0" layoutY="190"
+												mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0"
+												styleClass="update-btn" stylesheets="@application.css"
+												text="Orders" onAction="#orders" />
+											<Button layoutX="60.0" layoutY="260"
+												mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0"
+												styleClass="update-btn" stylesheets="@application.css"
+												text="Customers" onAction="#customer" />
+											<Button layoutX="60.0" layoutY="330"
+												mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0"
+												styleClass="update-btn" stylesheets="@application.css"
+												text="Supplier" onAction="#Supplier" />
+											<Button layoutX="60.0" layoutY="400"
+												mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0"
+												styleClass="update-btn" stylesheets="@application.css"
+												text="orders Line" onAction="#orderline" />
+											<Button layoutX="40.0" layoutY="470"
+												mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0"
+												styleClass="update-btn" stylesheets="@application.css"
+												text="Orders Payments" onAction="#OrderPayment" />
+											<Button layoutX="40.0" layoutY="540"
+												mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0"
+												styleClass="update-btn" stylesheets="@application.css"
+												text="Purchases Payments" onAction="#PurchasePayment" />
+											<Button layoutX="40.0" layoutY="610"
+												mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0"
+												styleClass="update-btn" stylesheets="@application.css"
+												text="Purchase Order" onAction="#PurchaseOrder" />
+											<Button layoutX="40.0" layoutY="680"
+												mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0"
+												styleClass="update-btn" stylesheets="@application.css"
+												text="Purchase line" onAction="#purchaseline" />
+
+
+
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</left>
+							<top>
+								<AnchorPane prefHeight="35.0" prefWidth="600.0"
+									styleClass="top-form" stylesheets="@application.css"
+									BorderPane.alignment="CENTER">
+									<children>
+										<Label alignment="CENTER" contentDisplay="CENTER"
+											layoutX="54.0" layoutY="8.0"
+											text="Inventory Managment System">
+											<font>
+												<Font name="System Bold" size="14.0" />
+											</font>
+										</Label>
+									</children>
+								</AnchorPane>
+							</top>
+
+							<center>
+
+								<AnchorPane id="center" prefHeight="700.0"
+									prefWidth="950.0" BorderPane.alignment="CENTER">
+									<Label alignment="CENTER" contentDisplay="CENTER"
+										layoutX="160.0" layoutY="10.0" text="Products Table">
+										<font>
+											<Font name="System Bold" size="14.0" />
+										</font>
+									</Label>
+									<children>
+										<AnchorPane layoutX="50.0" layoutY="50.0"
+											prefHeight="700.2" prefWidth="950.6"
+											AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+											AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+											<children>
+												<AnchorPane layoutX="0.0" layoutY="50.0"
+													prefHeight="700.4" prefWidth="950.0"
+													AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+													AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+													<children>
+														<AnchorPane layoutX="173.0" layoutY="101.0"
+															prefHeight="700.4" prefWidth="955.0"
+															AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+															AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+															<children>
+																<AnchorPane layoutX="150.0" layoutY="40.0"
+																	prefHeight="700.0" prefWidth="950.0"
+																	stylesheets="@application.css">
+																	<styleClass>
+																		<String fx:value="white-bg" />
+																		<String fx:value="shadow" />
+																	</styleClass>
+																	<children>
+																		<AnchorPane layoutX="1.0" layoutY="2.0"
+																			prefHeight="338.0" prefWidth="950.0"
+																			stylesheets="@application.css">
+																			<styleClass>
+																				<String fx:value="white-bg" />
+																				<String fx:value="shadow" />
+																			</styleClass>
+																			<children>
+																				<TextField fx:id="Search"
+																					onAction="#Search" layoutX="160.0" layoutY="20.0"
+																					prefHeight="34.0" prefWidth="218.0"
+																					promptText="Search by ID" styleClass="search"
+																					stylesheets="@application.css" />
+																				<ImageView fitHeight="30.0"
+																					fitWidth="23.0" layoutX="130.0" layoutY="25"
+																					pickOnBounds="true" preserveRatio="true">
+																					<image>
+																						<Image
+																							url="file:/C:/Users/Microsoft/Desktop/search.png" />
+																					</image>
+																				</ImageView>
+																				<TableView fx:id="product_table"
+																					layoutX="7.0" layoutY="58.0" prefHeight="275.0"
+																					prefWidth="950.0">
+																					<columns>
+																						<TableColumn text="product ID"
+																							fx:id="IDCol" minWidth="50" prefWidth="75" />
+																						<TableColumn text="Name"
+																							fx:id="nameCol" minWidth="150" prefWidth="150" />
+																						<TableColumn text="quantity"
+																							fx:id="QuantityCol" minWidth="150"
+																							prefWidth="150" />
+																						<TableColumn text="cost"
+																							fx:id="costCol" minWidth="150" prefWidth="150" />
+																						<TableColumn text="supplierID"
+																							fx:id="supplierIDCol" minWidth="150"
+																							prefWidth="150" />
+																						<TableColumn text="shelfLife"
+																							fx:id="shelflifeCol" minWidth="150"
+																							prefWidth="150" />
+																						<TableColumn text="arrivedate"
+																							fx:id="arrivedateCol" minWidth="150"
+																							prefWidth="150" />
+																					</columns>
+
+																				</TableView>
+																			</children>
+																		</AnchorPane>
+
+																		<Label layoutX="23.0" layoutY="370.0"
+																			text="product ID" AnchorPane.leftAnchor="23.0">
+																			<font>
+																				<Font name="System Bold" size="12.0" />
+																			</font>
+																		</Label>
+
+																		<TextField fx:id="proID" layoutX="100.0"
+																			layoutY="370.0" styleClass="textfield"
+																			stylesheets="@application.css" />
+
+																		<Label layoutX="23.0" layoutY="400.0"
+																			text="Name" AnchorPane.leftAnchor="23.0">
+																			<font>
+																				<Font name="System Bold" size="12.0" />
+																			</font>
+																		</Label>
+
+																		<TextField fx:id="Name" layoutX="100.0"
+																			layoutY="400.0" styleClass="textfield"
+																			stylesheets="@application.css" />
+
+																		<Label layoutX="23.0" layoutY="430.0"
+																			text="quantity" AnchorPane.leftAnchor="23.0">
+																			<font>
+																				<Font name="System Bold" size="12.0" />
+																			</font>
+																		</Label>
+
+																		<TextField fx:id="quantity" layoutX="100.0"
+																			layoutY="430.0" styleClass="textfield"
+																			stylesheets="@application.css" />
+
+																		<Label layoutX="23.0" layoutY="460.0"
+																			text="cost" AnchorPane.leftAnchor="23.0">
+																			<font>
+																				<Font name="System Bold" size="12.0" />
+																			</font>
+																		</Label>
+
+																		<TextField fx:id="cost" layoutX="100.0"
+																			layoutY="460.0" styleClass="textfield"
+																			stylesheets="@application.css" />
+
+																		<Label layoutX="23.0" layoutY="490.0"
+																			text="supplier ID" AnchorPane.leftAnchor="23.0">
+																			<font>
+																				<Font name="System Bold" size="12.0" />
+																			</font>
+																		</Label>
+
+																		<TextField fx:id="supplierID"
+																			layoutX="100.0" layoutY="490.0"
+																			styleClass="textfield" stylesheets="@application.css" />
+
+																		<Label layoutX="23.0" layoutY="520.0"
+																			text="shelf life" AnchorPane.leftAnchor="23.0">
+																			<font>
+																				<Font name="System Bold" size="12.0" />
+																			</font>
+																		</Label>
+
+																		<TextField fx:id="shelflife" layoutX="100.0"
+																			layoutY="520.0" styleClass="textfield"
+																			stylesheets="@application.css" />
+
+																		<Label layoutX="23.0" layoutY="550.0"
+																			text="Arrive date" AnchorPane.leftAnchor="23.0">
+																			<font>
+																				<Font name="System Bold" size="12.0" />
+																			</font>
+																		</Label>
+
+																		<TextField fx:id="arrivedate"
+																			layoutX="100.0" layoutY="550.0"
+																			styleClass="textfield" stylesheets="@application.css" />
+
+
+																		<Button text="Add" layoutX="30.0"
+																			layoutY="600.0" fx:id="Addbtn"
+																			styleClass="update-btn"
+																			stylesheets="@application.css"
+																			onAction="#handleAddButton" />
+
+																		<Button text="Delete" layoutX="100.0"
+																			layoutY="600.0" fx:id="deletebtn"
+																			styleClass="update-btn"
+																			stylesheets="@application.css"
+																			onAction="#handleDeleteButton" />
+
+																		<Button text="Refresh" layoutX="190.0"
+																			layoutY="600.0" fx:id="refreshbtn"
+																			styleClass="update-btn"
+																			stylesheets="@application.css"
+																			onAction="#handleRefreshButton" />
+
+																		<Button text="Products Sales Report"
+																			layoutX="550.0" layoutY="400.0" fx:id="salesreport"
+																			styleClass="update-btn"
+																			stylesheets="@application.css"
+																			onAction="#handleSalesReportButton" />
+
+																		<Button text="Orders Sales Report"
+																			layoutX="560.0" layoutY="450.0" fx:id="ordersreport"
+																			styleClass="update-btn"
+																			stylesheets="@application.css"
+																			onAction="#handleOrdersReportButton" />
+
+																		<Button
+																			text="purshaseOrder Count Per Supplier Report"
+																			layoutX="500" layoutY="500"
+																			fx:id="supplierOrderCountChartButton"
+																			styleClass="update-btn"
+																			stylesheets="@application.css"
+																			onAction="#showSupplierOrderCountChart" />
+																			
+																		<Button text="CustomerOrderCountChart"
+																			layoutX="560" layoutY="550"
+																			fx:id="customerOrderCountChartButton"
+																			styleClass="update-btn"
+																			stylesheets="@application.css"
+																			onAction="#showCustomerOrderCountChart" />
+																			
+																		<Button text="OrderCountbyYearChart"
+																			layoutX="560" layoutY="600"
+																			fx:id="orderCountByYearChartButton"
+																			styleClass="update-btn"
+																			stylesheets="@application.css"
+																			onAction="#showOrderCountByYearChart" />
+
+																	</children>
+																</AnchorPane>
+															</children>
+														</AnchorPane>
+													</children>
+												</AnchorPane>
+											</children>
+										</AnchorPane>
+									</children>
+								</AnchorPane>
+							</center>
+						</BorderPane>
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>
+

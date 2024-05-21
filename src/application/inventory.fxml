@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane stylesheets="@application.css" prefHeight="800.0"
+	prefWidth="1460.0" xmlns="http://javafx.com/javafx/17"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.inventory">
+	<children>
+		<!-- Label for available products table -->
+		<Label layoutX="80" layoutY="70"
+			text="Expired Products within 30 days" />
+
+		<!-- TableView for available products (quantity > 100) -->
+		<TableView fx:id="ExpireTableView" layoutX="80"
+			layoutY="100" prefHeight="600.0" prefWidth="300"
+			style="-fx-border-color: black; -fx-border-width: 2;-fx-effect: innershadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);">
+			<columns>
+				<TableColumn text="Product ID" fx:id="ProductIdColumn" />
+				<TableColumn text="Name" fx:id="NameColumn" />
+				<TableColumn text="Expire date" fx:id="Expiredate" />
+				<TableColumn text="Quantity" fx:id="q1" />
+			</columns>
+		</TableView>
+
+		<!-- Label for products out of stock soon table -->
+		<Label layoutX="600" layoutY="70" text="Out of Stock Soon" />
+
+		<!-- TableView for products out of stock soon (quantity < 100) -->
+		<TableView fx:id="outOfStockSoonTableView" layoutX="600"
+			layoutY="100" prefHeight="600" prefWidth="300"
+			style="-fx-border-color: black; -fx-border-width: 2; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);">
+			<columns>
+				<TableColumn text="Product ID"
+					fx:id="outOfStockSoonProductIdColumn" />
+				<TableColumn text="Name"
+					fx:id="outOfStockSoonNameColumn" />
+				<TableColumn text="Supplier ID"
+					fx:id="outOfStockSoonSupColumn" />
+				<TableColumn text="Quantity" fx:id="q2" />
+			</columns>
+		</TableView>
+
+		<!-- Label for out of stock products table -->
+		<Label layoutX="1120" layoutY="70" text="Out of Stock" />
+
+		<!-- TableView for out of stock products (quantity = 0) -->
+		<TableView fx:id="outOfStockTableView" layoutX="1120"
+			layoutY="100" prefHeight="600" prefWidth="300"
+			style="-fx-border-color: black; -fx-border-width: 2; -fx-effect: innershadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);">
+			<columns>
+				<TableColumn text="Product ID"
+					fx:id="outOfStockProductIdColumn" />
+				<TableColumn text="Name" fx:id="outOfStockNameColumn" />
+				<TableColumn text="Supplier ID"
+					fx:id="outOfStockSupColumn" />
+				<TableColumn text="Quantity" fx:id="q3" />
+			</columns>
+		</TableView>
+
+		<Button text="Back" layoutX="50.0" layoutY="750.0"
+			fx:id="backbtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleBackButton" />
+	</children>
+</AnchorPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane stylesheets="@application.css" prefHeight="700.0"
+	prefWidth="1260.0" xmlns="http://javafx.com/javafx/17"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.supplierController">
+	<children>
+
+		<TextField fx:id="Search" onAction="#search" layoutX="100"
+			layoutY="70" prefHeight="34.0" prefWidth="200.0"
+			promptText="Search by ID" styleClass="search"
+			stylesheets="@application.css" />
+
+		<ImageView fitHeight="30.0" fitWidth="23.0" layoutX="70"
+			layoutY="75" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image
+					url="file:/C:/Users/Microsoft/Desktop/search.png" />
+			</image>
+		</ImageView>
+
+		<Label layoutX="300" layoutY="150" text="Suppliers Table" />
+
+		<TableView fx:id="supplier_table" layoutX="200"
+			layoutY="200" prefHeight="500.0" prefWidth="390.0"
+			style="-fx-border-color: black; -fx-border-width: 2;-fx-effect: innershadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);">
+			<columns>
+				<TableColumn text="Supplier ID" fx:id="supplierIDCol" />
+				<TableColumn text="Name" fx:id="snameCol" />
+				<TableColumn text="Phone Number" fx:id="phoneNumberCol"
+					prefWidth="100" />
+				<TableColumn text="Address" fx:id="saddressCol"
+					prefWidth="115" />
+			</columns>
+		</TableView>
+
+		<Button text="Back" layoutX="50" layoutY="750"
+			fx:id="backSupplierBtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleBackSupplierButton" />
+
+		<Label layoutX="630" layoutY="210" text="Supplier ID">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="supplierIDField" layoutX="800"
+			layoutY="210" styleClass="textfield" stylesheets="@application.css" />
+
+		<Label layoutX="630" layoutY="280" text="Name">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="snameField" layoutX="800" layoutY="280"
+			styleClass="textfield" stylesheets="@application.css" />
+
+		<Label layoutX="630" layoutY="350" text="Phone Number">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="phoneNumberField" layoutX="800"
+			layoutY="350.0" styleClass="textfield" stylesheets="@application.css" />
+
+		<Label layoutX="630" layoutY="400" text="Address">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="saddressField" layoutX="800" layoutY="400"
+			styleClass="textfield" stylesheets="@application.css" />
+
+		<Button text="Add" layoutX="630.0" layoutY="500"
+			fx:id="addSupplierBtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleAddSupplierButton" />
+		<Button text="Delete" layoutX="730.0" layoutY="500"
+			fx:id="deleteSupplierBtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleDeleteSupplierButton" />
+		<Button text="Refresh" layoutX="830.0" layoutY="500"
+			fx:id="refreshSupplierBtn" styleClass="update-btn"
+			stylesheets="@application.css"
+			onAction="#handleRefreshSupplierButton" />
+
+	</children>
+</AnchorPane>
+
+
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/19.0.2"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.OrdersRateController">
+        <!-- LineChart for connecting data points -->
+        <LineChart fx:id="OrdersLineChart" prefHeight="500.0" prefWidth="700.0" layoutX="350" layoutY="150">
+            <xAxis>
+                <CategoryAxis label="Month" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Orders percentage" />
+            </yAxis>
+        </LineChart>
+
+    <Button text="Back" layoutX="50.0" layoutY="750" fx:id="backbtn"
+        styleClass="update-btn" stylesheets="@application.css"
+        onAction="#handleBackButton" />
+</AnchorPane>

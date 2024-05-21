@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane stylesheets="@application.css" prefHeight="800.0"
+	prefWidth="1460.0" xmlns="http://javafx.com/javafx/17"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.showPurChecksController">
+	<children>
+
+		<Label layoutX="450" layoutY="150" text="Purchase Payments made via Checks" />
+
+		<TableView fx:id="Checks_table" layoutX="450"
+			layoutY="200" prefHeight="500.0" prefWidth="635"
+			style="-fx-border-color: black; -fx-border-width: 2;-fx-effect: innershadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);">
+			<columns>
+				<TableColumn text="paymentID" fx:id="paymentID" />
+				<TableColumn text="payed_amount" fx:id="amountCol" />
+				<TableColumn text="payment_date" fx:id="payDateCol" />
+				<TableColumn text="due_date" fx:id="dueDateCol"/>
+				<TableColumn text="SupplierID" fx:id="sIDCol"/>
+				<TableColumn text="S_name" fx:id="snameCol"
+					prefWidth="100" />
+					<TableColumn text="phoneNumber" fx:id="phoneNumCol"/>
+			</columns>
+		</TableView>
+
+		<Button text="Back" layoutX="50.0" layoutY="750"
+			fx:id="backbtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleBackButton" />
+
+		
+	</children>
+</AnchorPane>
+        

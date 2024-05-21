@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane stylesheets="@application.css" prefHeight="700.0"
+	prefWidth="1260.0" xmlns="http://javafx.com/javafx/17"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.PurchaseOrderController">
+	<children>
+
+		<TextField fx:id="Search" onAction="#searchPurchaseOrder"
+			layoutX="100" layoutY="70" prefHeight="34.0" prefWidth="200.0"
+			promptText="Search by ID" styleClass="search"
+			stylesheets="@application.css" />
+
+		<ImageView fitHeight="30.0" fitWidth="23.0" layoutX="70"
+			layoutY="75" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image
+					url="file:/C:/Users/Microsoft/Desktop/search.png" />
+			</image>
+		</ImageView>
+
+		<Label layoutX="400" layoutY="80" text="Purchase Orders Table" />
+
+		<TableView fx:id="purchaseOrderTable" layoutX="350"
+			layoutY="110" prefHeight="500.0" prefWidth="350.0">
+			<columns>
+				<TableColumn text="PurOrder ID" fx:id="purIDCol" />
+				<TableColumn text="Total Cost" fx:id="totalCostCol" />
+				<TableColumn text="Purchase Date" fx:id="purDateCol"
+					prefWidth="110" />
+				<TableColumn text="Supplier ID" fx:id="supplierIDCol" />
+			</columns>
+		</TableView>
+
+		<Button text="Back" layoutX="50" layoutY="750" fx:id="backbtn"
+			styleClass="update-btn" stylesheets="@application.css"
+			onAction="#handleBackButton" />
+
+		<Label layoutX="750" layoutY="110" text="Purchase Order ID">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="purIDField" layoutX="900" layoutY="110"
+			styleClass="textfield" stylesheets="@application.css" />
+
+		<Label layoutX="750" layoutY="180" text="Total Cost">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="totalCostField" layoutX="900"
+			layoutY="180" styleClass="textfield" stylesheets="@application.css" />
+
+		<Label layoutX="750" layoutY="250" text="Purchase Date">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="purDateField" layoutX="900"
+			layoutY="250.0" styleClass="textfield" stylesheets="@application.css" />
+
+		<Label layoutX="750" layoutY="320" text="Supplier ID">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="supplierIDField" layoutX="900"
+			layoutY="320" styleClass="textfield" stylesheets="@application.css" />
+
+		<Button text="Add" layoutX="770" layoutY="400.0" fx:id="Addbtn"
+			styleClass="update-btn" stylesheets="@application.css"
+			onAction="#handleAddOrder" />
+		<Button text="Delete" layoutX="850" layoutY="400.0"
+			fx:id="deletebtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleDeleteButton" />
+		<Button text="Refresh" layoutX="950" layoutY="400.0"
+			fx:id="refreshbtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handleRefreshButton" />
+
+		<Button text="checks" layoutX="1050" layoutY="400.0"
+			fx:id="refreshbtn" styleClass="update-btn"
+			stylesheets="@application.css" onAction="#handlecheckButton" />
+
+		<Label layoutX="750" layoutY="470"
+			text="Supplier ID for Total Cost">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+
+		<TextField fx:id="supplierIdInput" layoutX="900"
+			layoutY="470" styleClass="textfield" stylesheets="@application.css" />
+		<Button text="TotalPerSupplier" layoutX="750" layoutY="520.0"
+			onAction="#getSupplierTotalCost" />
+		<TextField fx:id="totalPerSupplierField" layoutX="900"
+			layoutY="520" styleClass="textfield" stylesheets="@application.css" />
+	</children>
+</AnchorPane>
+
+
+

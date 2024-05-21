@@ -1,0 +1,18 @@
+/* styles.css */
+.welcome-button {
+    -fx-font-size: 18px;
+    -fx-padding: 20;
+}
+
+.main-button {
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-background-color: linear-gradient(to bottom, #61a2b1, #2A5058);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.main-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #2A5058, #61a2b1);
+    -fx-cursor: hand;
+}
